@@ -1,0 +1,49 @@
+1 ) http://127.0.0.1:8000/api/v1/login/
+
+method: POST
+Json_data:
+{
+"username":"india",
+"password":"india@1"
+
+}
+this will give a token
+
+2) http://127.0.0.1:8000/api/v1/groups/
+method: GET
+call with token 
+this api wil list all the groups for that user
+
+3)http://127.0.0.1:8000/api/v1/group/<group_id>
+
+method: GET
+call with token 
+this api wil list all the photo ids  of the group
+
+4)http://127.0.0.1:8000/api/v1/photos/group=<group_id>
+
+method: GET
+call with token 
+this api wil list all the photos with details of the group
+
+5)http://127.0.0.1:8000/api/v1/photo/<photo_id>
+
+method: GET
+call with token 
+this api wil list all the details of the photo.
+
+6)http://127.0.0.1:8000/api/v1/logout/
+
+method: GET
+call with token 
+this api wil logout the user and disable token
+
+
+
+To download photos from Flickr websites and add to our sqlite DB
+run the python script in command line
+python manage.py migrate_flickr_photos username
+pass username :india
+
+photos will be downloaded to downloads folder
+
